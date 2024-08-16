@@ -5,5 +5,5 @@ Entregables de la semana
 - [ ] Resumen de comandos básicos de Git
 - [ ] Programa que utilice Polimorfismo y Abstracción
 - [x] Programa que utilice el patrón Singleton
-- [ ] Programa que utilice Inyección de Dependencias
+- [x] Programa que utilice Inyección de Dependencias
 - [ ] (Opcional) Programa que utilice todo lo anterior
