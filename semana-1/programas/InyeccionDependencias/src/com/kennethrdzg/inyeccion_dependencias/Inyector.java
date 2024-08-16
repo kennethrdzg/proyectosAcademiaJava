@@ -1,18 +1,11 @@
 package com.kennethrdzg.inyeccion_dependencias;
 
-import com.kennethrdzg.inyeccion_dependencias.procesadores_pago.PayPal;
-import com.kennethrdzg.inyeccion_dependencias.procesadores_pago.ProcesadorPago;
-import com.kennethrdzg.inyeccion_dependencias.procesadores_pago.Shopify;
-import com.kennethrdzg.inyeccion_dependencias.procesadores_pago.Stripe;
-import com.kennethrdzg.inyeccion_dependencias.procesadores_pago.TipoPago;
-import com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria.Estafeta;
-import com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria.FedEx;
-import com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria.Redpack;
-import com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria.ServicioPaqueteria;
-import com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria.TipoPaqueteria;
-
 public class Inyector {
-	static ProcesadorPago inyectarProcesadorPago(TipoPago tipo) {
+	static Negocio inyectarNegocio(String nombre, TipoPago pago, TipoPaqueteria paqueteria) {
+		return new Negocio(nombre, inyectarProcesadorPago(pago), inyectarServicioPaqueteria(paqueteria));
+	}
+	
+	private static ProcesadorPago inyectarProcesadorPago(TipoPago tipo) {
 		switch(tipo) {
 		case TipoPago.PAYPAL:
 			return new PayPal();
@@ -23,7 +16,8 @@ public class Inyector {
 		}
 		throw new UnsupportedOperationException();
 	}
-	static ServicioPaqueteria inyectarServicioPaqueteria(TipoPaqueteria tipo) {
+	
+	private static ServicioPaqueteria inyectarServicioPaqueteria(TipoPaqueteria tipo) {
 		switch(tipo) {
 		case TipoPaqueteria.FEDEX: 
 			return new FedEx();

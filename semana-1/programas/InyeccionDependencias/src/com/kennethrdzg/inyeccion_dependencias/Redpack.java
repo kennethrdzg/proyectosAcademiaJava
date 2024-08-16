@@ -1,4 +1,4 @@
-package com.kennethrdzg.inyeccion_dependencias.servicios_paqueteria;
+package com.kennethrdzg.inyeccion_dependencias;
 
 public class Redpack extends ServicioPaqueteria{
 	public Redpack() {
