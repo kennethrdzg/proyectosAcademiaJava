@@ -1,12 +1,18 @@
 package com.kennethrdzg.singleton;
 
 public class Tarea {
-	Prioridad prioridad;
+	String nombre;
 	
-	public Tarea() {
-		prioridad = Prioridad.BAJA;
+	public Tarea(String nombre) {
+		this.nombre = nombre;
 	}
-	public Tarea(Prioridad prioridad) {
-		this.prioridad = prioridad;
+	
+	public void ejecutar() {
+		System.out.println(this + " ejecutada.");
+	}
+	
+	@Override
+	public String toString() {
+		return "Tarea [" + nombre + "]";
 	}
 }
