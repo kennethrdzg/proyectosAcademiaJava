@@ -1,11 +1,11 @@
 package com.kennethrdzg.inyeccion_dependencias;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		boolean continuar = true;
+		// Scanner scanner = new Scanner(System.in);
+		// boolean continuar = true;
 		
 		Negocio negocio = Inyector.inyectarNegocio("MiPrimerTiendita", TipoPago.STRIPE, TipoPaqueteria.REDPACK);
 		
