@@ -1,4 +1,5 @@
-# Best Salesmen
+# Best Salespeople
+**By Kenneth Rodriguez**
 
 A company sells 10 different products, and has a staff of 8 people. To incentivize the employees, the company plans to give its best 3 salespersons a raise of $1000. To qualify for the raise, the employees must have individual sales of at least $700. If more than 3 employees qualify for the raise, the top 3 with the highest individual sales will earn the reward. 
 
@@ -68,7 +69,7 @@ public class Sale {
 
 ## Solution
 
-We use a list, such as `List<Sale> salesData`, to keep track of all the individual sales. By creating a `Stream` from this list, we can acheve our desired goal of finding the best salespeople. 
+We use a list, such as `List<Sale> salesData`, to keep track of all the individual sales. By creating a `Stream` from this list, we can achieve our desired goal of finding the best salespeople. 
 
 After creating the stream, we must first filter the individual sales that reach the goal of at least $700. Then, we sort the sales in decreasing order of value (product price times units sold). The sorted sales are then mapped to their respective salespeople, of which only the distinct salespersons are used. With this we have obtained the salespeople that fit the criteria. 
 
