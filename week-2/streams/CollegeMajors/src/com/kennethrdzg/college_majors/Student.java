@@ -1,4 +1,4 @@
-package com.kennethrdzg.test;
+package com.kennethrdzg.college_majors;
 
 public class Student {
 	String name;

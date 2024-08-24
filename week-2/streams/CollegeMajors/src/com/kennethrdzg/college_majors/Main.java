@@ -1,4 +1,4 @@
-package com.kennethrdzg.test;
+package com.kennethrdzg.college_majors;
 
 import java.util.List;
 import java.util.ArrayList;
