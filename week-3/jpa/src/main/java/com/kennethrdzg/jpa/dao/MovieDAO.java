@@ -14,7 +14,7 @@ public interface MovieDAO {
 
     List<Movie> findByTitle(String title);
 
-    // void update(Movie movie);
+    void update(Movie movie);
 
     // void delete(Integer id);
 

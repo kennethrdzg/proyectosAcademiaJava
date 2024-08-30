@@ -44,4 +44,10 @@ public class MovieRepository implements MovieDAO {
         query.setParameter("data", "%" + title + "%");
         return query.getResultList();
     }
+
+    @Override
+    @Transactional
+    public void update(Movie movie){
+        entityManager.merge(movie);
+    }
 }

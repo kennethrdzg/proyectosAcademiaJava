@@ -23,7 +23,8 @@ public class Main {
             // createMovie(movieDAO);
             // readMovie(movieDAO);
             // queryAllMovies(movieDAO);
-            queryMoviesByTitle(movieDAO);
+            // queryMoviesByTitle(movieDAO);
+            updateMovie(movieDAO);
         };
     }
 
@@ -62,5 +63,19 @@ public class Main {
         for(Movie movie: movies){
             System.out.println(movie);
         }
+    }
+
+    private void updateMovie(MovieDAO movieDAO){
+        int id = 24;
+
+        System.out.println("Retrieving movie with id: " + id);
+        Movie movie = movieDAO.findById(id);
+
+        System.out.println("Updating movie...");
+        movie.setTitle("Minions 2");
+
+        movieDAO.update(movie);
+
+        System.out.println("Updated movie: " + movie);
     }
 }
