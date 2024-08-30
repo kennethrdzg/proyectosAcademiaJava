@@ -1,7 +1,9 @@
 # Java Persistence API
 
-This project is a demonstration of the Java Persistance API using Spring Boot. Using the JPA and MySQL, we will create a movie database with information about movies' titles, release date, budget, revenue, runtime and public rating, as well as a Java application that will interact with the database. 
-Using the JPA will allow us to simplify the process of managing a database with Java, remving the need to write manual SQL queries and preventing potential SQL Injection attacks.
+[Download PDF Version](raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/jpa/JPA.pdf)
+
+This project is a demonstration of the Java Persistence API using Spring Boot. Using the JPA and MySQL, we will create a movie database with information about movies' titles, release date, budget, revenue, runtime and public rating, as well as a Java application that will interact with the database. 
+Using the JPA will allow us to simplify the process of managing a database with Java, removing the need to write manual SQL queries and preventing potential SQL Injection attacks.
 
 ## Database
 For this project, we will create a database with some of the most popular movies in TMDB. We can use this publicly available [dataset](https://www.kaggle.com/datasets/ursmaheshj/top-10000-popular-movies-tmdb-05-2023) to get the data we need to construct our database. 
@@ -30,7 +32,7 @@ Now we can insert values into the table and populate the database.
 
 Finally, we can perform a simple query to see that our database has been set up correctly. 
 
-`SELECT * FROM movies`
+`SELECT * FROM movies;`
 
 If everything is fine, we should get a result like this:
 
@@ -130,25 +132,9 @@ public class Movie {
     @Column(name = "id")
     private int id;
 
-    @Column(name="title")
-    private String title;
+    // Other Attributes
 
-    @Column(name = "release_date")
-    private LocalDate releaseDate;
-
-    @Column(name = "budget")
-    private double budget;
-
-    @Column(name = "revenue")
-    private double revenue;
-
-    @Column(name = "runtime")
-    private int runtime;
-
-    @Column(name = "rating")
-    private double rating;
-
-    // Default constructor
+    // Constructors
     public Movie(){
     }
 
@@ -185,7 +171,7 @@ This class implements the `MovieDAO` interface, and defines the behavior for eac
 
 Some of this class's methods are transactional, which means that changes to the database are executed and saved only if everything was executed correctly. This prevents the unwanted loss of data (like updating an entry incorrectly).
 
-The only attribute of this class is `entityManager`, which is used to provide persistance to entity instances in the program.
+The only attribute of this class is `entityManager`, which is used to provide persistence to entity instances in the program.
 
 ```
 @Repository
