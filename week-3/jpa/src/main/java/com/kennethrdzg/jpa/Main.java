@@ -1,6 +1,7 @@
 package com.kennethrdzg.jpa;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +21,8 @@ public class Main {
     public CommandLineRunner commandLineRunner(MovieDAO movieDAO){
         return runner -> {
             // createMovie(movieDAO);
-            readMovie(movieDAO);
+            // readMovie(movieDAO);
+            queryAllMovies(movieDAO);
         };
     }
 
@@ -41,5 +43,14 @@ public class Main {
         Movie movie = movieDAO.findById(id);
 
         System.out.println("Found the movie: " + movie);
+    }
+
+    private void queryAllMovies(MovieDAO movieDAO){
+        System.out.println("Retrieving all movies in database");
+        List<Movie> movies = movieDAO.findAll();
+        
+        for(Movie movie: movies){
+            System.out.println(movie);
+        }
     }
 }

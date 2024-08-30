@@ -10,7 +10,7 @@ public interface MovieDAO {
     
     Movie findById(Integer id);
 
-    // List<Movie> findAll();
+    List<Movie> findAll();
 
     // List<Movie> findByTitle();
 
