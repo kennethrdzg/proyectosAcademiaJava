@@ -1,6 +1,6 @@
 # Java Persistence API
 
-[Download PDF Version](raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/jpa/JPA.pdf)
+[Download PDF Version](https://raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/jpa/JPA.pdf)
 
 This project is a demonstration of the Java Persistence API using Spring Boot. Using the JPA and MySQL, we will create a movie database with information about movies' titles, release date, budget, revenue, runtime and public rating, as well as a Java application that will interact with the database. 
 Using the JPA will allow us to simplify the process of managing a database with Java, removing the need to write manual SQL queries and preventing potential SQL Injection attacks.
