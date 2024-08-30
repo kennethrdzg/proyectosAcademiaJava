@@ -34,3 +34,28 @@ If everything is fine, we should get a result like this:
 ![Query Result ALT Text](./img/queryResult.png)
 
 The database set up process can be done by executing [this SQL script](./database/create_db.sql). 
+
+## Maven Dependencies
+This project requires 2 dependencies to work properly: **Spring Data JPA** and **MySQL Connector/J**.
+
+### Spring Data JPA
+This dependency helps implement a JPA application. It will essentially be the backbone of the project, as it will allow integration with our database.
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+    <version>3.2.9</version>
+</dependency>
+```
+
+### MySQL Connector/J
+This dependency provides the driver necessary for connecting our application with a MySQL database. This driver may be exchanged for another to allow connections with other databases. 
+
+```
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>8.4.0</version>
+</dependency>
+```

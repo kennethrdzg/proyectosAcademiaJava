@@ -23,4 +23,9 @@ public class MovieRepository implements MovieDAO {
         System.out.print("Saving movie " + movie);
         entityManager.persist(movie);
     }
+
+    @Override
+    public Movie findById(Integer id){
+        return entityManager.find(Movie.class, id);
+    }
 }

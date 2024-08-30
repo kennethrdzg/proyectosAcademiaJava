@@ -19,7 +19,8 @@ public class Main {
     @Bean
     public CommandLineRunner commandLineRunner(MovieDAO movieDAO){
         return runner -> {
-            createMovie(movieDAO);
+            // createMovie(movieDAO);
+            readMovie(movieDAO);
         };
     }
 
@@ -32,5 +33,13 @@ public class Main {
         movieDAO.save(tempMovie);
 
         System.out.println("Saved movie. Generated ID: " + tempMovie.getId());
+    }
+
+    private void readMovie(MovieDAO movieDAO){
+        int id = 10;
+        System.out.println("Retrieving movie with id: " + id);
+        Movie movie = movieDAO.findById(id);
+
+        System.out.println("Found the movie: " + movie);
     }
 }
