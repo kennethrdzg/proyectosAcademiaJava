@@ -12,7 +12,7 @@ public interface MovieDAO {
 
     List<Movie> findAll();
 
-    // List<Movie> findByTitle();
+    List<Movie> findByTitle(String title);
 
     // void update(Movie movie);
 

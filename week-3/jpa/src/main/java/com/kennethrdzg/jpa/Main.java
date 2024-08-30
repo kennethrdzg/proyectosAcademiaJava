@@ -22,7 +22,8 @@ public class Main {
         return runner -> {
             // createMovie(movieDAO);
             // readMovie(movieDAO);
-            queryAllMovies(movieDAO);
+            // queryAllMovies(movieDAO);
+            queryMoviesByTitle(movieDAO);
         };
     }
 
@@ -49,6 +50,15 @@ public class Main {
         System.out.println("Retrieving all movies in database");
         List<Movie> movies = movieDAO.findAll();
         
+        for(Movie movie: movies){
+            System.out.println(movie);
+        }
+    }
+
+    private void queryMoviesByTitle(MovieDAO movieDAO){
+        String title = "Avengers";
+        System.out.println("Retrieving movies with \"" + title + "\" in title.");
+        List<Movie> movies = movieDAO.findByTitle(title);
         for(Movie movie: movies){
             System.out.println(movie);
         }

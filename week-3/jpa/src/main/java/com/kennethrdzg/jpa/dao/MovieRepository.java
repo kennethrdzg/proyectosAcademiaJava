@@ -37,4 +37,11 @@ public class MovieRepository implements MovieDAO {
         TypedQuery<Movie> query = entityManager.createQuery("FROM Movie", Movie.class);
         return query.getResultList();
     }
+
+    @Override
+    public List<Movie> findByTitle(String title){
+        TypedQuery<Movie> query = entityManager.createQuery("FROM Movie WHERE title LIKE :data", Movie.class);
+        query.setParameter("data", "%" + title + "%");
+        return query.getResultList();
+    }
 }
