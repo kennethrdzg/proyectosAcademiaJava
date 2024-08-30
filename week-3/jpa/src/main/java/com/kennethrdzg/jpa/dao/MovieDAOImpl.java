@@ -12,11 +12,11 @@ import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
 
 @Repository
-public class MovieRepository implements MovieDAO {
+public class MovieDAOImpl implements MovieDAO {
     private EntityManager entityManager;
 
     @Autowired
-    public MovieRepository(EntityManager entityManager){
+    public MovieDAOImpl(EntityManager entityManager){
         this.entityManager = entityManager;
     }
 
@@ -60,5 +60,12 @@ public class MovieRepository implements MovieDAO {
             return;
         }
         entityManager.remove(movie);
+    }
+
+    @Override
+    @Transactional
+    public int deleteAll(){
+        int rowsDeleted = entityManager.createQuery("DELETE FROM Movie").executeUpdate();
+        return rowsDeleted;
     }
 }

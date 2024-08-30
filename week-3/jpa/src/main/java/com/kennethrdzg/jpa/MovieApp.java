@@ -12,20 +12,21 @@ import com.kennethrdzg.jpa.dao.MovieDAO;
 import com.kennethrdzg.jpa.entity.Movie;
 
 @SpringBootApplication
-public class Main {
+public class MovieApp {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(MovieApp.class, args);
     }
 
     @Bean
     public CommandLineRunner commandLineRunner(MovieDAO movieDAO){
         return runner -> {
-            // createMovie(movieDAO);
-            // readMovie(movieDAO);
-            // queryAllMovies(movieDAO);
-            // queryMoviesByTitle(movieDAO);
-            // updateMovie(movieDAO);
+            createMovie(movieDAO);
+            readMovie(movieDAO);
+            queryAllMovies(movieDAO);
+            queryMoviesByTitle(movieDAO);
+            updateMovie(movieDAO);
             deleteMovie(movieDAO);
+            deleteAllMovies(movieDAO);
         };
     }
 
@@ -72,6 +73,11 @@ public class Main {
         System.out.println("Retrieving movie with id: " + id);
         Movie movie = movieDAO.findById(id);
 
+        if(movie == null){
+            System.out.println("Movie was not found");   
+            return;
+        }
+
         System.out.println("Updating movie...");
         movie.setTitle("Minions 2");
 
@@ -84,5 +90,13 @@ public class Main {
         int id = 11;
         System.out.println("Deleting movie with id: " + id);
         movieDAO.delete(id);
+    }
+
+    private void deleteAllMovies(MovieDAO movieDAO){
+        System.out.println("Deleting all movies from database.");
+
+        int deletedRows = movieDAO.deleteAll();
+
+        System.out.println("Number of Deleted Movies: " + deletedRows);
     }
 }
