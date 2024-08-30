@@ -50,4 +50,15 @@ public class MovieRepository implements MovieDAO {
     public void update(Movie movie){
         entityManager.merge(movie);
     }
+
+    @Override
+    @Transactional
+    public void delete(Integer id){
+        Movie movie = entityManager.find(Movie.class, id);
+        if(movie == null){
+            System.out.println("Movie was not found.");
+            return;
+        }
+        entityManager.remove(movie);
+    }
 }

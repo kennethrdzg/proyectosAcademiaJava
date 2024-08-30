@@ -16,7 +16,7 @@ public interface MovieDAO {
 
     void update(Movie movie);
 
-    // void delete(Integer id);
+    void delete(Integer id);
 
     // int deleteAll();
     

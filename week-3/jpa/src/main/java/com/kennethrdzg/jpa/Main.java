@@ -24,7 +24,8 @@ public class Main {
             // readMovie(movieDAO);
             // queryAllMovies(movieDAO);
             // queryMoviesByTitle(movieDAO);
-            updateMovie(movieDAO);
+            // updateMovie(movieDAO);
+            deleteMovie(movieDAO);
         };
     }
 
@@ -77,5 +78,11 @@ public class Main {
         movieDAO.update(movie);
 
         System.out.println("Updated movie: " + movie);
+    }
+
+    private void deleteMovie(MovieDAO movieDAO){
+        int id = 11;
+        System.out.println("Deleting movie with id: " + id);
+        movieDAO.delete(id);
     }
 }
