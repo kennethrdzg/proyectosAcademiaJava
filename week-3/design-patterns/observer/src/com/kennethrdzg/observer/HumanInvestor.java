@@ -8,7 +8,7 @@ public class HumanInvestor implements Investor{
     double initialBudget;
     double budget;
     int shares;
-    double lastPrice;
+    public double lastPrice;
 
     public HumanInvestor(String name){
         this.name = name;
