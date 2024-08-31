@@ -53,7 +53,7 @@ public interface Investor {
 ### Concrete Observer - HumanInvestor
 The `HumanInvestor` class implements the `Investor` interface, allowing it to observe a desired `Stock`. The class has other attributes like `budget`, which represents the current available money, `shares`, which represents the number of shares currently owned by the Investor, and `lastPrice`, which keeps track of the last known value of the observed stock price. 
 
-The "trading" algorithm is a very simple implementation: if the current price is lower than the last known price, buy stock; if the current price if higher than the last known price, sell stock. 
+The "trading" algorithm is a very simple implementation: if the current price is lower than the last known price, buy stock; if the current price is higher than the last known price, sell stock.
 ```
 public class HumanInvestor implements Investor{
     String name;
@@ -81,13 +81,6 @@ The `BotInvestor` class is similar to the `HumanInvestor`, except it contains tw
 
 The trading algorithm uses `priceHistory` to determine a positive, negative, or neutral trend on the stock price. When the class receives an update from the `Stock` subject, it will update the price history with the latest stock price, and will then determine the current trend of the stock price. If the trend is negative (stock price is decreasing), it will buy shares; if the trend is positive (stock price is increasing) it will sell its shares. 
 ```
-package com.kennethrdzg.observer;
-
-import java.util.List;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-
 public class BotInvestor implements Investor {
     double initialBudget;
     double budget;
@@ -116,7 +109,7 @@ Running the program will represent the experiment taking place. The `Stock`, `Hu
 
 After all objects are set up, a `for` loop will represent the passage of time, where each loop is a day of the experiment. Each day the stock price is updated, and the observers are all notified and act according to their own algorithm. 
 
-After the loop is over (representing the end of the year-long experiment), all observers will sell any remaining stock regardeless of the current price of the stock. By tallying the final available money and comparing it to the initial budget, we can determine how much profit was made (or how much money was lost). 
+After the loop is over (representing the end of the year-long experiment), all observers will sell any remaining stock regardless of the current price of the stock. By tallying the final available money and comparing it to the initial budget, we can determine how much profit was made (or how much money was lost). 
 
 ```
 public class Main {
@@ -160,6 +153,6 @@ After running our tests, we can observe that they have been executed without fai
 ![TestResults ALT TEXT](./img/testResults.png)
 
 ## Conclusion
-The Observer pattern is one that is ever present in our daily lives. From news outlets, to phone messages, to social media notifications, this pattern can be simple to understand, but interesting to implement nonetheless. I've worked with similar styles, but finally understanding the design pattern proper is very refreshing.
+The Observer pattern is one that is ever present in our daily lives. From news outlets, to phone messages, to social media notifications, this pattern can be simple to understand, but interesting to implement nonetheless. I've worked with similar styles, but finally understanding the design pattern properly is very refreshing.
 
 Introducing unit testing to the project was very exciting. As someone who has only ever used print statements to debug errors, learning a new tool for finding bugs and errors was a learning experience, but one I appreciated a lot. 
