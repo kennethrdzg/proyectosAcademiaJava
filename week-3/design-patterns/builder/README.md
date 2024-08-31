@@ -1,5 +1,7 @@
 # Fantasy Character Builder
 
+[Download PDF Version](https://raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/design-patterns/builder/BuilderDesignPattern.pdf)
+
 **Situation**: A game developer is making his dream fantasy RPG. The most fundamental part of an RPG is creating your own character to identify with, so the developer has been working on the character creation menu. His current plans include the player selecting a character from one of three races: Human, Elf, or Dwarf. Each of these will grant players with different boosts and skills. 
 
 ## Builder Pattern
