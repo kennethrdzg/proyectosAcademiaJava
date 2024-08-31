@@ -1,7 +1,9 @@
 # Week 3
 Deliverables
-- [ ] Observer
-- [ ] Builder
+- [x] Observer Design Pattern with Unit Testing
+- [x] Builder
 - [ ] Decorator
-- [ ] JPA (?)
-- [ ] Unit testing (JUnit) for at least one design pattern)
+  - [ ] Add Conclusion
+  - [ ] PDF File
+- [x] JPA
+

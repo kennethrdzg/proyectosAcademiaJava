@@ -189,10 +189,17 @@ public class MovieDAOImpl implements MovieDAO {
 
 ## Result
 Once we execute the application, we can observe how Spring Boot is initialized. 
+
 ![Spring Boot Initializing](./img/SpringBootInitializing.png)
 
 After initialization is finished, all methods called by the `commandLineRunner` method in `MovieApp` will be executed, resulting in an output similar to this:
+
 ![Application Output](./img/applicationOutput.png)
 
 Finally, when all methods have been executed, the Spring application will shutdown. 
+
 ![Spring Shutdown](./img/springShutdown.png)
+
+## Conclusion
+
+I had previously used JDBC to establish a connection to databases, but hadn't really considered the security risks of SQL Injection attacks. This project has helped me understand the importance of working with layers of abstraction, minimizing the potential risks of a project, as well as producing cleaner code.
