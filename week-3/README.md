@@ -3,5 +3,6 @@ Deliverables
 - [ ] Observer
 - [ ] Builder
 - [ ] Decorator
-- [ ] JPA (?)
+- [x] JPA
 - [ ] Unit testing (JUnit) for at least one design pattern)
+
