@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Stock {
     String name;
-    private List<Investor> observers = new ArrayList<>();
+    private List<Investor> investors = new ArrayList<>();
     private double price;
 
     public Stock(String name, double price){
@@ -16,17 +16,24 @@ public class Stock {
     }
 
     public void addObserver(Investor investor){
-        observers.add(investor);
+        investors.add(investor);
     }
 
     public void removeObserver(Investor investor){
-        observers.remove(investor);
+        investors.remove(investor);
     }
 
-    public void notifyObservers(){
-        for(Investor investor: observers){
+    public List<Investor> getInvestors(){
+        return this.investors;
+    }
+
+    public int notifyObservers(){
+        int notified = 0;
+        for(Investor investor: investors){
             investor.update(this);
+            notified += 1;
         }
+        return notified;
     }
 
     public double getPrice(){
@@ -40,6 +47,6 @@ public class Stock {
     }
 
     public String toString(){
-        return this.name + " - $" + this.price;
+        return this.name + " [ $" + this.price + " ]";
     }
 }
