@@ -1,5 +1,7 @@
 # Stock Market Observer Simulation
 
+[Download PDF Version](https://raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/week-3/design-patterns/observer/ObserverDesignPattern.pdf)
+
 **Situation**: A group of computer science students wants to determine if they can make a stock trading bot that is better than themselves at making profit. For this purpose they have decided to code a bot with Java that observes the price changes in the **Mapple** stock. 
 After creating their algorithm, they assign the bot an initial budget of $10,000.0 to buy stock. When the bot decides to either sell or buy stock, one member of the group will perform the corresponding action. Another member of the group is also given $10,000.0 to trade, but he will only rely on his intuition to make business decisions. 
 The experiment will last a year, and at the end they will compare which team has made the most profit.
