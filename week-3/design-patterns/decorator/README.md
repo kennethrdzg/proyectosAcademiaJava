@@ -1,7 +1,7 @@
 # Computer Build Decorator
 
-<!--[Download PDF Version](https://raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/design-patterns/decorator/DecoratorDesignPattern.pdf)
--->
+[Download PDF Version](https://raw.githubusercontent.com/kennethrdzg/proyectosAcademiaJava/main/week-3/design-patterns/decorator/DecoratorDesignPattern.pdf)
+
 **Situation**: A computer science student has decided to buy their own desktop computer, but with so many available options and upgrades they cannot decide which parts are best for their needs. Should he invest more money on a dedicated GPU, or should he instead use that money to buy more RAM sticks? Instead of agonizing over this problem, they have instead decided to write a program to compare a base computer's specs and cost against an upgraded one, and decide which has the best **Price Value**.
 
 ## Decorator Pattern
