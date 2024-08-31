@@ -1,8 +1,13 @@
-package com.kennethrdzg.observer;
+package com.kennethrdzg.observer.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import com.kennethrdzg.observer.BotInvestor;
+import com.kennethrdzg.observer.HumanInvestor;
+import com.kennethrdzg.observer.Investor;
+import com.kennethrdzg.observer.Stock;
 
 class TestObserver {
 	

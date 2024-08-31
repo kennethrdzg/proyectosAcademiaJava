@@ -154,7 +154,19 @@ After running our tests, we can observe that they have been executed without fai
 
 ![TestResults ALT TEXT](./img/testResults.png)
 
+## Coverage
+The Eclipse IDE provides a **Coverage** feature, which allows developers to observe how much of their code is actually being executed. This feature can be used to determine if some instructions aren't being executed at all, or if unexpected behavior is ocurring (like in try-catch statements). 
+
+Most programs don't reach a 100% coverage, but a good developer should attempt to reach a high coverage percentage nonetheless.
+
+After the coverage, the IDE will highlight in green all instructions that were executed, will instructions that weren't executed will be highlighted with red color.
+
+We can also observe the coverage percentage in the bottom pannel, with out program reaching a 91.2% coverage.
+
+![Coverage percentage](./img/coverage.png)
+
 ## Conclusion
+
 The Observer pattern is one that is ever present in our daily lives. From news outlets, to phone messages, to social media notifications, this pattern can be simple to understand, but interesting to implement nonetheless. I've worked with similar styles, but finally understanding the design pattern properly is very refreshing.
 
 Introducing unit testing to the project was very exciting. As someone who has only ever used print statements to debug errors, learning a new tool for finding bugs and errors was a learning experience, but one I appreciated a lot. 
