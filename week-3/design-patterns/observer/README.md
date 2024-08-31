@@ -149,3 +149,17 @@ public class Main {
     }
 }
 ```
+
+## Unit Testing
+By Unit testing, we can check and validate methods or sections of code to guarantee their behavior is accurate to our expectations. For this project, it is very much important that stock prices are properly updated, that all observers are notified of change, and that they act accordingly. For this reason, the class `TestObserver` will provide some tests to perform and validate the project's behavior. 
+
+![TestObserver ALT TEXT](./img/testObserver.png)
+
+After running our tests, we can observe that they have been executed without failures. 
+
+![TestResults ALT TEXT](./img/testResults.png)
+
+## Conclusion
+The Observer pattern is one that is ever present in our daily lives. From news outlets, to phone messages, to social media notifications, this pattern can be simple to understand, but interesting to implement nonetheless. I've worked with similar styles, but finally understanding the design pattern proper is very refreshing.
+
+Introducing unit testing to the project was very exciting. As someone who has only ever used print statements to debug errors, learning a new tool for finding bugs and errors was a learning experience, but one I appreciated a lot. 
