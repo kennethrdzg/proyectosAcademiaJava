@@ -155,7 +155,7 @@ After running our tests, we can observe that they have been executed without fai
 ![TestResults ALT TEXT](./img/testResults.png)
 
 ## Coverage
-The Eclipse IDE provides a **Coverage** feature, which allows developers to observe how much of their code is actually being executed. This feature can be used to determine if some instructions aren't being executed at all, or if unexpected behavior is ocurring (like in try-catch statements). 
+The Eclipse IDE provides a **Coverage** feature, which allows developers to observe how much of their code is actually being executed. This feature can be used to determine if some instructions aren't being executed at all, or if unexpected behavior is occurring (like in try-catch statements). 
 
 Most programs don't reach a 100% coverage, but a good developer should attempt to reach a high coverage percentage nonetheless.
 
