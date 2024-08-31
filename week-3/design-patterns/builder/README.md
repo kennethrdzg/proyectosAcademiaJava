@@ -1,6 +1,6 @@
 # Fantasy Character Builder
 
-**Situation**: A game developer is making his dream fantasy RPG. The most fundamental part of an RPG is creating your own character to identified with, so the developer has been working on the character creation menu. His current plans include the player selecting a character from one of three races: Human, Elf, or Dwarf. Each of these will grant players with different boosts and skills. 
+**Situation**: A game developer is making his dream fantasy RPG. The most fundamental part of an RPG is creating your own character to identify with, so the developer has been working on the character creation menu. His current plans include the player selecting a character from one of three races: Human, Elf, or Dwarf. Each of these will grant players with different boosts and skills. 
 
 ## Builder Pattern
 The **Builder Design Pattern** will allow the game developer to construct their desired character creation menu. The Builder Pattern allows for a step-by-step construction of an object. In this case, it is a perfect solution for the current situation, as the Builder Pattern could give the player enough customization options.
@@ -24,7 +24,7 @@ public class PlayerCharacter{
 ```
 
 ### Builder - CharacterBuilder
-`CharacterBuilder` is the interface that dtermines the step required for character creation. This interface provides the method definition for the concrete builders to use.
+`CharacterBuilder` is the interface that determines the step required for character creation. This interface provides the method definition for the concrete builders to use.
 ```
 public interface CharacterBuilder {
     void buildRace();
