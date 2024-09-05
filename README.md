@@ -1,5 +1,5 @@
 # javaAcademyProyects
-Back End Academy Project with Java
+Back End Academy Projects with Java
 
 Index
 - [Week 1](week-1/)
