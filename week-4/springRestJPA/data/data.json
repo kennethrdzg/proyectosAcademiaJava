@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "The Witcher 3: Wild Hunt",
+        "genre": "RPG",
+        "platform": "PC/PS4/Xbox One",
+        "releaseYear": 2015,
+        "developer": "CD Projekt Red",
+        "publisher": "CD Projekt",
+        "score": 10.0
+    },
+    {
+        "id": 2,
+        "title": "Red Dead Redemption 2",
+        "genre": "Action-adventure",
+        "platform": "PS4/Xbox One/PC",
+        "releaseYear": 2018,
+        "developer": "Rockstar Studios",
+        "publisher": "Rockstar Games",
+        "score": 10.0
+    },
+    {
+        "id": 3,
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "genre": "Action-adventure",
+        "platform": "Nintendo Switch",
+        "releaseYear": 2017,
+        "developer": "Nintendo",
+        "publisher": "Nintendo",
+        "score": 10.0
+    },
+    {
+        "id": 4,
+        "title": "Dark Souls III",
+        "genre": "Action RPG",
+        "platform": "PS4/Xbox One/PC",
+        "releaseYear": 2016,
+        "developer": "FromSoftware",
+        "publisher": "Bandai Namco",
+        "score": 9.5
+    },
+    {
+        "id": 5,
+        "title": "Hades",
+        "genre": "Roguelike",
+        "platform": "PC/Nintendo Switch",
+        "releaseYear": 2020,
+        "developer": "Supergiant Games",
+        "publisher": "Supergiant Games",
+        "score": 9.8
+    },
+    {
+        "id": 6,
+        "title": "Cyberpunk 2077",
+        "genre": "RPG",
+        "platform": "PC/PS4/Xbox One",
+        "releaseYear": 2020,
+        "developer": "CD Projekt Red",
+        "publisher": "CD Projekt",
+        "score": 8.0
+    }
+]
