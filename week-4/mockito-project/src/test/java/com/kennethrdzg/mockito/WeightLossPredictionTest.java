@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
-class CalculoFinancieroTest{
+class WeightLossPredictionTest{
     @Mock
     WeightPredictor wp;
     WeightLossTracker tracker;
