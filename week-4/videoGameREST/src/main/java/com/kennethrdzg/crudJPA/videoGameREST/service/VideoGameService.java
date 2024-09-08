@@ -10,11 +10,4 @@ public interface VideoGameService {
 	List<VideoGame> findAll();
     VideoGame update(VideoGame videoGame);
     void delete(Integer id);
-	/*
-	 * VideoGame findById(Integer id);
-	List<VideoGame> findAll();
-	VideoGame post(VideoGame videoGame);
-	VideoGame update(VideoGame videoGame);
-	void delete(Integer id);
-	 */
 }
