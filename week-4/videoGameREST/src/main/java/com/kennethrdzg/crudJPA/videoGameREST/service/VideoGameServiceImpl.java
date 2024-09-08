@@ -22,9 +22,24 @@ public class VideoGameServiceImpl implements VideoGameService{
 		videoGameDAO.save(videoGame);
 		return videoGame;
 	}
+
+    @Override
+    public VideoGame findById(Integer id){
+        return videoGameDAO.findById(id);
+    }
 	
 	@Override
 	public List<VideoGame> findAll(){
 		return videoGameDAO.findAll();
 	}
+
+    @Override
+    public VideoGame update(VideoGame videoGame){
+        return videoGameDAO.update(videoGame);
+    }
+
+    @Override
+    public void delete(Integer id){
+        videoGameDAO.delete(id);
+    }
 }
