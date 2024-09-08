@@ -24,11 +24,8 @@ public class Movie {
 	@Column(name = "Release_Date")
 	private String releaseDate;
 
-	@Column(name = "Original_Language")
-	private String originalLanguage;
-
 	@Column(name = "Vote_Average")
-	private double score;
+	private double vote_average;
 
 	@Column(name = "Budget")
 	private double budget;

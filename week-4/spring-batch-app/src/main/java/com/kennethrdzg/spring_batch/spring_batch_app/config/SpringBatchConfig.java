@@ -14,6 +14,8 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.kennethrdzg.spring_batch.spring_batch_app.entity.Movie;
@@ -45,7 +47,7 @@ public class SpringBatchConfig{
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
         lineTokenizer.setDelimiter(",");
         lineTokenizer.setStrict(false);
-        lineTokenizer.setNames("id","title","release_date","original_language","vote_average","budget","revenue");
+        lineTokenizer.setNames("id","title","release_date","vote_average","budget","revenue");
 
         BeanWrapperFieldSetMapper<Movie> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
         fieldSetMapper.setTargetType(Movie.class);
@@ -79,6 +81,7 @@ public class SpringBatchConfig{
                 .reader(reader())
                 .processor(processor())
                 .writer(writer())
+                .taskExecutor(taskExecutor())
                 .build();
     }
 
@@ -88,6 +91,13 @@ public class SpringBatchConfig{
         //          .flow(step1()).end().build();
         return new JobBuilder("importMovies", jobRepository)
                     .flow(step1(jobRepository, transactionManager)).end().build();
+    }
+
+    @Bean
+    public TaskExecutor taskExecutor(){
+        SimpleAsyncTaskExecutor asyncTaskExecutor = new SimpleAsyncTaskExecutor();
+        asyncTaskExecutor.setConcurrencyLimit(10);
+        return asyncTaskExecutor;
     }
 }
 
